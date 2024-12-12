@@ -18,7 +18,7 @@ public class tresEnRaya {
 		System.out.print("(O) - Nombre del Jugador 2: ");
 		String jugador2 = s.nextLine();
 
-		// Determino quien empieza
+// Determino quien empieza
 		boolean jugarDeNuevo = true;
 		while (jugarDeNuevo) {
 			String turno = rand.nextBoolean() ? jugador1 : jugador2;
