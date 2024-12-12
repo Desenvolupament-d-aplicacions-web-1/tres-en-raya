@@ -78,10 +78,19 @@ public class tresEnRaya {
 	                } else {
 	                    turno = turno.equals(jugador1) ? jugador2 : jugador1;
 	                }
+	            }
+	        }
+	        
+	        // Pregunto si quiere volver a jugar
+
+	        System.out.println("¿Quieren jugar otra vez? (sí/no): ");
+	        jugarDeNuevo = s.next().equalsIgnoreCase("sí");
+	        s.nextLine();
+	    }
+	    System.out.println("Gracias por jugar!");
+	    s.close();
 	                
 			
 		}
 
 	}
-
-}
