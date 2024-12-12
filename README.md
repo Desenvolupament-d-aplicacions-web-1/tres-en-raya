@@ -11,6 +11,7 @@ Programar el juego "tres en raya" en java donde dos jugadores irán posicionando
 - Haya un empate debido a que no quedan mas huecos libres en el tablero.
 4. Cuando termina el juego se preguntara si quieren echar la revancha o finalizar el juego.
 
+
 ## Instrucciones:
 
 1. Hay que dejar bien claro a que jugador le toca poner ficha.
