@@ -24,6 +24,30 @@ public class tresEnRaya {
 			String turno = rand.nextBoolean() ? jugador1 : jugador2;
 			System.out.println(" ");
 			System.out.println(turno + " comienza primero. ");
+			
+			// Creo el tablero y lo muestro
+			boolean juegoTerminado = false;
+	        char[] tablero = {'_', '_', '_', '_', '_', '_', '_', '_', '_'};
+	        
+	        while (!juegoTerminado) {
+	        	System.out.println(" ");
+	            System.out.println("Tablero actual:");
+	            for (int i = 0; i < 9; i++) {
+	                System.out.print(" " + tablero[i] + " ");
+	                if (i % 3 == 2) System.out.println();
+	            }
+	            
+	            // Pido que se inicie un turno
+	            System.out.println(" ");
+	            System.out.println(turno + ", introduce tu posición (1-9): ");
+	            int posicion = s.nextInt() - 1;
+	            
+	            // Hago que si la posicion no esta en el tablero salte un mensaje de error
+	            if (posicion < 0 || posicion >= 9 || tablero[posicion] != '_') {
+	                System.out.println("Movimiento inválido, intenta de nuevo.\n");
+	                continue;
+	            }
+			
 		}
 
 	}
