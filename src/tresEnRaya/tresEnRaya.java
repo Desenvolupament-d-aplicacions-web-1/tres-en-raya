@@ -47,6 +47,38 @@ public class tresEnRaya {
 	                System.out.println("Movimiento inválido, intenta de nuevo.\n");
 	                continue;
 	            }
+	            
+	            tablero[posicion] = turno.equals(jugador1) ? 'X' : 'O';
+	            
+	            // Verifico si hay una linia ganadora en la ronda
+	            if ((tablero[0] != '_' && tablero[0] == tablero[1] && tablero[1] == tablero[2]) ||
+	                    (tablero[3] != '_' && tablero[3] == tablero[4] && tablero[4] == tablero[5]) ||
+	                    (tablero[6] != '_' && tablero[6] == tablero[7] && tablero[7] == tablero[8]) ||
+	                    (tablero[0] != '_' && tablero[0] == tablero[3] && tablero[3] == tablero[6]) ||
+	                    (tablero[1] != '_' && tablero[1] == tablero[4] && tablero[4] == tablero[7]) ||
+	                    (tablero[2] != '_' && tablero[2] == tablero[5] && tablero[5] == tablero[8]) ||
+	                    (tablero[0] != '_' && tablero[0] == tablero[4] && tablero[4] == tablero[8]) ||
+	                    (tablero[2] != '_' && tablero[2] == tablero[4] && tablero[4] == tablero[6])) {
+	                    juegoTerminado = true;
+	                    System.out.println("\n¡" + turno + " ha ganado!\n");
+	                    
+	            // Determino si el tablero esta lleno para el empate        
+	            } else {
+	                boolean tableroLleno = true;
+	                for (char c : tablero) {
+	                    if (c == '_') {
+	                        tableroLleno = false;
+	                        break;
+	                    }
+	                }
+	                
+	                if (tableroLleno) {
+	                    System.out.println("Es un empate! :)");
+	                    juegoTerminado = true;
+	                } else {
+	                    turno = turno.equals(jugador1) ? jugador2 : jugador1;
+	                }
+	                
 			
 		}
 
